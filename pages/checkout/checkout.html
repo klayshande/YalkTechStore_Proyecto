@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout - Yalk TechStore</title>
+</head>
+
+<body style="font-family: cursive; background-color: azure;">
+
+    <header align="center">
+
+        <table align="center">
+
+            <tr>
+
+                <td>
+                    <img src="../../img/logoYalk.jpg" alt="Logo Yalk TechStore" width="100">
+                </td>
+
+                <td>
+
+                    <h1>Yalk TechStore</h1>
+
+                    <p>
+                        Finaliza tu compra de forma segura
+                    </p>
+
+                </td>
+
+            </tr>
+
+        </table>
+
+    </header>
+
+    <br>
+
+    <nav style="text-align: center;">
+
+        <a href="../../index.html">Inicio</a>-
+        <a href="../catalogos/catalogo.html">Catálogo</a>-
+        <a href="../detalles/detalles.html">Detalles</a>-
+        <a href="../checkout/checkout.html">Checkout</a>-
+        <a href="../perfiles/perfil.html">Perfil</a>
+
+    </nav>
+
+    <hr>
+
+    <section style="text-align: center;">
+
+        <h2>Productos Seleccionados</h2>
+
+        <table border="1" style="margin: auto;">
+
+            <tr>
+
+                <th>Imagen</th>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    <img src="../../img/laptopErgonomica.jpg" width="120" height="120">
+                </td>
+
+                <td>Laptop Gamer</td>
+
+                <td>1</td>
+
+                <td>$900</td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    <img src="../../img/Mouse.jpg" width="120" height="120">
+                </td>
+
+                <td>Mouse RGB</td>
+
+                <td>1</td>
+
+                <td>$40</td>
+
+            </tr>
+
+        </table>
+
+    </section>
+
+    <hr>
+
+    <section style="text-align: center;">
+
+        <h2>Datos del Cliente</h2>
+
+        <form method="post" action="../../pages/perfiles/perfil.html">
+
+            <label style="color: brown;">Nombre Completo:</label>
+
+            <br>
+
+            <input type="text" name="nombre" placeholder="Ingrese su nombre" required minlength="3" maxlength="50"
+                pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]+" title="Solo letras y espacios"
+                style="border-color: rgba(248, 244, 9, 0.851);">
+
+            <br><br>
+
+            <label style="color: brown;">Correo Electrónico:</label>
+
+            <br>
+
+            <input type="email" name="correo" placeholder="Ingrese su correo" required maxlength="50"
+                style="border-color: rgba(248, 244, 9, 0.851);">
+
+            <br><br>
+
+            <label style="color: brown;">Número de Teléfono:</label>
+
+            <br>
+
+            <input type="tel" name="telefono" placeholder="Ingrese su teléfono" required pattern="[0-9]{8,15}"
+                title="Solo números entre 8 y 15 dígitos" style="border-color: rgba(248, 244, 9, 0.851);">
+            <br><br>
+
+            <label style="color: brown;">Dirección:</label>
+
+            <br>
+
+            <textarea name="direccion" rows="4" cols="40" placeholder="Ingrese su dirección" required minlength="10"
+                maxlength="150" style="border-color: rgba(248, 244, 9, 0.851);"></textarea>
+
+            <br><br>
+
+            <label style="color: brown;">Ciudad:</label>
+
+            <br>
+
+            <input type="text" name="ciudad" placeholder="Ciudad" required minlength="3" maxlength="30"
+                pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]+" title="Solo letras" style="border-color: rgba(248, 244, 9, 0.851);">
+            <br><br>
+
+            <label style="color: brown;">Método de Pago:</label>
+
+            <br>
+
+            <select name="pago" required style="border-color: rgba(248, 244, 9, 0.851);">
+
+                <option value="">Seleccione</option>
+
+                <option>Tarjeta de Crédito</option>
+                <option>Tarjeta de Débito</option>
+                <option>PayPal</option>
+                <option>Transferencia Bancaria</option>
+
+            </select>
+
+            <br><br>
+
+            <label style="color: brown;">Número de Tarjeta:</label>
+
+            <br>
+
+            <input type="text" name="tarjeta" placeholder="1234567812345678" required pattern="[0-9]{16}" maxlength="16"
+                title="Debe contener 16 números" style="border-color: rgba(248, 244, 9, 0.851);">
+
+            <br><br>
+
+            <label style="color: brown;">Fecha de Expiración:</label>
+
+            <br>
+
+            <input type="month" name="fecha" required style="border-color: rgba(248, 244, 9, 0.851);">
+
+            <br><br>
+
+            <label style="color: brown;">CVV:</label>
+
+            <br>
+
+            <input type="password" name="cvv" placeholder="CVV" required pattern="[0-9]{3}" maxlength="3"
+                title="Debe contener 3 números" style="border-color: rgba(248, 244, 9, 0.851);">
+
+            <br><br>
+
+            <label style="color: brown;">Tipo de Envío:</label>
+
+            <br>
+
+            <input type="radio" name="envio" required>
+            Envío Estándar
+
+            <br>
+
+            <input type="radio" name="envio" required>
+            Envío Express
+
+            <br><br>
+
+            <label style="color: brown;">Intereses Tecnológicos:</label>
+
+            <br>
+
+            <input type="checkbox" name="interes" value="gaming">
+            Gaming
+
+            <br>
+
+            <input type="checkbox" name="interes" value="oficina">
+            Oficina
+
+            <br>
+
+            <input type="checkbox" name="interes" value="bienestar">
+            Bienestar Digital
+
+            <br><br>
+
+            <label style="color: brown;">Fecha de Compra:</label>
+
+            <br>
+
+            <input type="date" required style="border-color: rgba(248, 244, 9, 0.851);">
+
+            <br><br>
+
+            <label style="color: brown;">Hora de Entrega:</label>
+
+            <br>
+
+            <input type="time" required min="08:00" max="18:00" style="border-color: rgba(248, 244, 9, 0.851);">
+
+            <br><br>
+
+            <label style="color: brown;">Comentarios:</label>
+
+            <br>
+
+            <textarea rows="5" cols="40" placeholder="Comentarios adicionales" minlength="5" maxlength="200"
+                style="border-color: rgba(248, 244, 9, 0.851);"></textarea>
+
+            <hr>
+
+            <h2>Resumen del Pedido</h2>
+
+            <table border="1" style="margin: auto;">
+
+                <tr>
+
+                    <th>Producto</th>
+                    <th>Precio</th>
+
+                </tr>
+
+                <tr>
+
+                    <td>Laptop Gamer</td>
+                    <td>$900</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Mouse RGB</td>
+                    <td>$40</td>
+
+                </tr>
+
+            </table>
+
+            <br>
+
+            <p>
+                <strong>Subtotal:</strong> $940
+            </p>
+
+            <p>
+                <strong>Envío:</strong> $20
+            </p>
+
+            <p>
+                <strong>Total:</strong> $960
+            </p>
+
+            <button type="submit" style="background-color: rgba(7, 215, 226, 0.479);">
+                Confirmar Compra
+            </button>
+
+        </form>
+
+    </section>
+
+    <hr>
+
+    <section style="text-align: center;">
+
+        <h2>Métodos de Pago Aceptados</h2>
+
+        <img src="../../img/MetodoPago.png" width="350" height="150">
+
+    </section>
+
+    <hr>
+
+    <section style="text-align: center;">
+
+        <h2>Beneficios de Comprar en Yalk TechStore</h2>
+
+        <ul type="none">
+
+            <li>Compra segura</li>
+
+            <br>
+
+            <li>Productos originales</li>
+
+            <br>
+
+            <li>Garantía de calidad</li>
+
+            <br>
+
+            <li>Soporte personalizado</li>
+
+        </ul>
+
+    </section>
+
+    <hr>
+
+    <footer style="text-align: end;">
+
+        <p>Yalk TechStore 2026</p>
+
+        <p>
+            Compra segura y tecnología para tu bienestar
+        </p>
+
+        <p>
+            Creado por Klay Manzanillas
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
